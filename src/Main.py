@@ -2,6 +2,7 @@
 # Import Libraries and Dependencies
 from src.Data_Loader.Load_data import Data_Loader
 from src.Machine_Learning.Naive_Bayes import Naive_Bayes
+from src.Machine_Learning.Support_Vector_Machine import SVM
 #
 allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch','Ticket', 'Fare', 'Cabin', 'Embarked']
 #
@@ -45,10 +46,10 @@ while True:
         print('Must enter a numeric digit between 1 and 5.')
 #
 k_fold = 10
+counter = 10
+predicted_scores = []
 #
 if MLM == '1':
-    counter = 10
-    predicted_scores = []
     while counter < len(df):
         #
         # Split original dataframe into the training, and testing sample
@@ -88,7 +89,47 @@ if MLM == '1':
     overall_score = sum(predicted_scores)/len(predicted_scores)
     print('Naive Bayes mean score of: ['+str(overall_score)+']')
 elif MLM == '2':
-    pass
+    while counter < len(df):
+        #
+        # Split original dataframe into the training, and testing sample
+        validation_features = []
+        validation_labels = []
+        train_features = []
+        train_labels = []
+        #
+        # Populate test_df and train_df respectively
+        i = 1
+        for row in df:
+            if i >= counter - k_fold and i < counter:
+                validation_features.append([row[0], row[1]])
+                validation_labels.append(row[2])
+            else:
+                train_features.append([row[0], row[1]])
+                train_labels.append(row[2])
+            i += 1
+        #
+        svm = SVM(features_matrix=train_features,
+                  labels=train_labels,
+                  kernel="rbf",
+                  gamma=0.09,
+                  C=5)
+        #
+        # Trains the Naive Bayes classifier using the data we passed
+        svm.fit_training_set()
+        #
+        # We use the validation set of data to test our classifier
+        predicted = svm.predict(feature_array=validation_features)
+        #
+        # We calculate the accuracy score of the sample run
+        accuracy_score = svm.calculate_accuracy_score(labels=validation_labels,
+                                                      predicted=predicted)
+        predicted_scores.append(accuracy_score)
+        print('K_Fold sample accuracy: [' + str(accuracy_score) + ']')
+        counter += 10
+    #
+    # Calculates the mean predicted score based off all the tests
+    overall_score = sum(predicted_scores) / len(predicted_scores)
+    print('SVM mean score of: [' + str(overall_score) + ']')
 elif MLM == '3':
     pass
 elif MLM == '4':
