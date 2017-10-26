@@ -34,10 +34,17 @@ while True:
     except Exception as e:
         print('Graphic option must be 1[Enabled] or 2[Disabled]')
 #
+# Load the training data frame
 data_loader_obj = Data_Loader(feature_1=feature_1,
                               feature_2=feature_2,
                               data_mode="train")
 df = data_loader_obj.get_data()
+#
+# Load the testing data frame
+data_loader_obj = Data_Loader(feature_1=feature_1,
+                              feature_2=feature_2,
+                              data_mode="test")
+dft = data_loader_obj.get_data()
 #
 # Enter Machine Learning Method
 while True:
@@ -94,7 +101,7 @@ if MLM == '1':
                                   features=validation_features,
                                   feature_1_name=feature_1,
                                   feature_2_name=feature_2,
-                                  labels=validation_labels)
+                                  labels=predicted)
         #
         predicted_scores.append(accuracy_score)
         print('K_Fold sample accuracy: [' + str(accuracy_score) + ']')
@@ -104,7 +111,35 @@ if MLM == '1':
     overall_score = sum(predicted_scores)/len(predicted_scores)
     print('Naive Bayes mean score of: ['+str(overall_score)+']')
     #
+    # We use the testing set of data on the classifier that has been trained
+    predicted = nb.predict(feature_array=dft)
+    #
+    # Plot graph of estimated values
+    GH.scatter_plot_generator(graphic_mode=1,
+                              features=dft,
+                              feature_1_name=feature_1,
+                              feature_2_name=feature_2,
+                              labels=predicted)
+    #
 elif MLM == '2':
+    #
+    # Request SVM inputs
+    supported_kernels = ['rbf', 'linear', 'poly', 'sigmoid', 'precomputed']
+    #
+    while True:
+        #
+        kernel = input("Enter kernel for SVM calculation. Kernel must be one of the following:"
+                       "\nlinear"
+                       "\nrbf"
+                       "\npoly"
+                       "\nsigmoid"
+                       "\nprecomputed\n").lower()
+        #
+        if kernel in supported_kernels:
+            break
+        else:
+            print('Incorrect Input. Try again.')
+        #
     while counter < len(df):
         #
         # Split original dataframe into the training, and testing sample
@@ -126,7 +161,7 @@ elif MLM == '2':
         #
         svm = SVM(features_matrix=train_features,
                   labels=train_labels,
-                  kernel="rbf",
+                  kernel=kernel,
                   gamma=0.09,
                   C=5)
         #
@@ -145,7 +180,7 @@ elif MLM == '2':
                                   features=validation_features,
                                   feature_1_name=feature_1,
                                   feature_2_name=feature_2,
-                                  labels=validation_labels)
+                                  labels=predicted)
         #
         predicted_scores.append(accuracy_score)
         print('K_Fold sample accuracy: [' + str(accuracy_score) + ']')
@@ -155,8 +190,19 @@ elif MLM == '2':
     overall_score = sum(predicted_scores) / len(predicted_scores)
     print('SVM mean score of: [' + str(overall_score) + ']')
     #
+    #
+    # We use the testing set of data on the classifier that has been trained
+    predicted = svm.predict(feature_array=dft)
+    #
+    # Plot graph of estimated values
+    GH.scatter_plot_generator(graphic_mode=1,
+                              features=dft,
+                              feature_1_name=feature_1,
+                              feature_2_name=feature_2,
+                              labels=predicted)
 elif MLM == '3':
     pass
 elif MLM == '4':
     pass
+#
 

@@ -10,8 +10,8 @@ class Data_Loader:
         #
         if self.data_mode == "train":
             self.df = pd.read_csv('../data/train.csv')
-        # elif self.data_mode == "test":
-        #     self.df = pd.read_csv('../data/test.csv')
+        elif self.data_mode == "test":
+            self.df = pd.read_csv('../data/test.csv')
         else:
             print('Invalid Data Mode.')
             exit(0)
