@@ -3,6 +3,7 @@
 from src.Data_Loader.Load_data import Data_Loader
 from src.Machine_Learning.Naive_Bayes import Naive_Bayes
 from src.Machine_Learning.Support_Vector_Machine import SVM
+import src.Graph_Handles.Graph_Handler as GH
 #
 allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch','Ticket', 'Fare', 'Cabin', 'Embarked']
 #
@@ -10,22 +11,28 @@ allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch
 while True:
     feature_1 = input("Enter first feature: ").lower().title()
     feature_2 = input("Enter second feature: ").lower().title()
+    graphic_mode = input("Enter graphic mode: 1[Enabled], 2[Disabled]")
     #
-    if feature_1 in allowed_features and feature_2 in allowed_features:
-        break
-    else:
-        print('Features must be of the following:'
-              '\n* Passengerid'
-              '\n* Survived'
-              '\n* Pclass'
-              '\n* Sex'
-              '\n* Age'
-              '\n* Sibsp'
-              '\n* Parch'
-              '\n* Ticket'
-              '\n* Fare'
-              '\n* Cabin'
-              '\n* Embarked\n')
+    try:
+        graphic_mode = int(graphic_mode)
+        if feature_1 in allowed_features and feature_2 in allowed_features and graphic_mode in [1,2]:
+            break
+        else:
+            print('Features must be of the following:'
+                  '\n* Passengerid'
+                  '\n* Survived'
+                  '\n* Pclass'
+                  '\n* Sex'
+                  '\n* Age'
+                  '\n* Sibsp'
+                  '\n* Parch'
+                  '\n* Ticket'
+                  '\n* Fare'
+                  '\n* Cabin'
+                  '\n* Embarked\n')
+            print('Graphic option must be 1[Enabled] or 2[Disabled]')
+    except Exception as e:
+        print('Graphic option must be 1[Enabled] or 2[Disabled]')
 #
 data_loader_obj = Data_Loader(feature_1=feature_1,
                               feature_2=feature_2,
@@ -81,6 +88,14 @@ if MLM == '1':
         # We calculate the accuracy score of the sample run
         accuracy_score = nb.calculate_accuracy_score(labels=validation_labels,
                                                      predicted=predicted)
+        #
+        # Plot graph of estimated values
+        GH.scatter_plot_generator(graphic_mode=graphic_mode,
+                                  features=validation_features,
+                                  feature_1_name=feature_1,
+                                  feature_2_name=feature_2,
+                                  labels=validation_labels)
+        #
         predicted_scores.append(accuracy_score)
         print('K_Fold sample accuracy: [' + str(accuracy_score) + ']')
         counter += 10
@@ -88,6 +103,7 @@ if MLM == '1':
     # Calculates the mean predicted score based off all the tests
     overall_score = sum(predicted_scores)/len(predicted_scores)
     print('Naive Bayes mean score of: ['+str(overall_score)+']')
+    #
 elif MLM == '2':
     while counter < len(df):
         #
@@ -123,6 +139,14 @@ elif MLM == '2':
         # We calculate the accuracy score of the sample run
         accuracy_score = svm.calculate_accuracy_score(labels=validation_labels,
                                                       predicted=predicted)
+        #
+        # Plot graph of estimated values
+        GH.scatter_plot_generator(graphic_mode=graphic_mode,
+                                  features=validation_features,
+                                  feature_1_name=feature_1,
+                                  feature_2_name=feature_2,
+                                  labels=validation_labels)
+        #
         predicted_scores.append(accuracy_score)
         print('K_Fold sample accuracy: [' + str(accuracy_score) + ']')
         counter += 10
@@ -130,6 +154,7 @@ elif MLM == '2':
     # Calculates the mean predicted score based off all the tests
     overall_score = sum(predicted_scores) / len(predicted_scores)
     print('SVM mean score of: [' + str(overall_score) + ']')
+    #
 elif MLM == '3':
     pass
 elif MLM == '4':
