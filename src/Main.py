@@ -46,6 +46,11 @@ data_loader_obj = Data_Loader(feature_1=feature_1,
                               data_mode="test")
 dft = data_loader_obj.get_data()
 #
+# Plot training set as scatter plot graph
+# GH.plot_graph(features=df,
+#               feature_1_name=feature_1,
+#               feature_2_name=feature_2)
+#
 # Enter Machine Learning Method
 while True:
     MLM = input('Enter which machine learning method to utilise as follows:'

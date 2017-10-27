@@ -15,3 +15,13 @@ def scatter_plot_generator(graphic_mode, features, feature_1_name, feature_2_nam
     plt.xlabel(feature_1_name)
     plt.ylabel(feature_2_name)
     plt.show()
+#
+def plot_graph(features, feature_1_name, feature_2_name):
+    """ Plots a simple x, y graph """
+    #
+    for feature in features:
+        plt.plot(feature[0], feature[1], 'bo')
+    #
+    plt.xlabel(feature_1_name)
+    plt.ylabel(feature_2_name)
+    plt.show()
