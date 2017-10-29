@@ -12,6 +12,9 @@ def clean_data_frame(df):
     # Check for sex feature, and normalize it
     df = check_gender_and_convert(df=df)
     #
+    # Check for embarked feature, and convert it
+    df = check_embarked_and_convert(df=df)
+    #
     return df
 #
 def remove_missing_data(df):
@@ -48,12 +51,37 @@ def check_gender_and_convert(df):
     #
     return df
 #
+def check_embarked_and_convert(df):
+    """ Makes a check for the feature 'Embarked', and if found, normalizes it to 0,1,2 """
+    embarked = ['C','S','Q']
+    if df[0][0] in embarked:
+        for row in df:
+            row[0] = convert_embarked(row[0].upper())
+    #
+    if df[0][1] in embarked:
+        for row in df:
+            row[1] = convert_embarked(row[1].upper())
+    #
+    return df
+#
 def normalize_sex(sex):
     """ Returns 0 if male, 1 if female """
     if sex == "male":
         return 0
     elif sex == "female":
         return 1
+    else:
+        print('Invalid Data Mode.')
+        exit(0)
+#
+def convert_embarked(embarked):
+    """ Converts C=0, S=1, Q=2 """
+    if embarked == "C":
+        return 0
+    elif embarked == "S":
+        return 1
+    elif embarked == "Q":
+        return 2
     else:
         print('Invalid Data Mode.')
         exit(0)
