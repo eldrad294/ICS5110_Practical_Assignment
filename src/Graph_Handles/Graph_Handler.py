@@ -14,6 +14,7 @@ def scatter_plot_generator(graphic_mode, features, feature_1_name, feature_2_nam
     #
     plt.xlabel(feature_1_name)
     plt.ylabel(feature_2_name)
+    plt.title(feature_1_name + ' vs ' + feature_2_name)
     plt.show()
 #
 def plot_graph(features, feature_1_name, feature_2_name):
@@ -24,4 +25,5 @@ def plot_graph(features, feature_1_name, feature_2_name):
     #
     plt.xlabel(feature_1_name)
     plt.ylabel(feature_2_name)
+    plt.title(feature_1_name + ' vs ' + feature_2_name)
     plt.show()
