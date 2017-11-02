@@ -35,6 +35,13 @@ def remove_missing_data(df):
             if str(row[1]) is None or str(row[1]) == "":
                 continue
         #
+        try:
+            if np.isnan(row[2]):
+                continue
+        except Exception:
+            if str(row[2]) is None or str(row[2]) == "":
+                continue
+        #
         clean_df.append(row)
     return clean_df
 #
@@ -49,6 +56,10 @@ def check_gender_and_convert(df):
         for row in df:
             row[1] = normalize_sex(row[1])
     #
+    if df[0][2] in gender:
+        for row in df:
+            row[2] = normalize_sex(row[2])
+    #
     return df
 #
 def check_embarked_and_convert(df):
@@ -61,6 +72,10 @@ def check_embarked_and_convert(df):
     if df[0][1] in embarked:
         for row in df:
             row[1] = convert_embarked(row[1].upper())
+    #
+    if df[0][2] in embarked:
+        for row in df:
+            row[2] = convert_embarked(row[2].upper())
     #
     return df
 #

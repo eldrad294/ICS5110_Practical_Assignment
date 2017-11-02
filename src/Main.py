@@ -5,17 +5,19 @@ from src.Machine_Learning.Naive_Bayes import Naive_Bayes
 from src.Machine_Learning.Support_Vector_Machine import SVM
 import src.Graph_Handles.Graph_Handler as GH
 #
-allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch','Ticket', 'Fare', 'Cabin', 'Embarked']
+allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch','Ticket', 'Fare', 'Embarked']
 #
 # Enter 2 Features, and data_mode [Train/Test]
 while True:
     feature_1 = input("Enter first feature: ").lower().title()
     feature_2 = input("Enter second feature: ").lower().title()
+    feature_3 = input("Enter third feature: ").lower().title()
     graphic_mode = input("Enter graphic mode: 1[Enabled], 2[Disabled]")
     #
     try:
         graphic_mode = int(graphic_mode)
-        if feature_1 in allowed_features and feature_2 in allowed_features and graphic_mode in [1,2]:
+        if feature_1 in allowed_features and feature_2 in allowed_features and feature_3 in allowed_features and \
+                        graphic_mode in [1,2]:
             break
         else:
             print('Features must be of the following:'
@@ -28,7 +30,6 @@ while True:
                   '\n* Parch'
                   '\n* Ticket'
                   '\n* Fare'
-                  '\n* Cabin'
                   '\n* Embarked\n')
             print('Graphic option must be 1[Enabled] or 2[Disabled]')
     except Exception as e:
@@ -37,12 +38,14 @@ while True:
 # Load the training data frame
 data_loader_obj = Data_Loader(feature_1=feature_1,
                               feature_2=feature_2,
+                              feature_3=feature_3,
                               data_mode="train")
 df = data_loader_obj.get_data()
 #
 # Load the testing data frame
 data_loader_obj = Data_Loader(feature_1=feature_1,
                               feature_2=feature_2,
+                              feature_3=feature_3,
                               data_mode="test")
 dft = data_loader_obj.get_data()
 #
@@ -81,11 +84,11 @@ if MLM == '1':
         i = 1
         for row in df:
             if i >= counter-k_fold and i < counter:
-                validation_features.append([row[0],row[1]])
-                validation_labels.append(row[2])
+                validation_features.append([row[0],row[1], row[2]])
+                validation_labels.append(row[3])
             else:
-                train_features.append([row[0],row[1]])
-                train_labels.append(row[2])
+                train_features.append([row[0],row[1], row[2]])
+                train_labels.append(row[3])
             i += 1
         #
         nb = Naive_Bayes(features_matrix=train_features,
@@ -102,10 +105,16 @@ if MLM == '1':
                                                      predicted=predicted)
         #
         # Plot graph of estimated values
-        GH.scatter_plot_generator(graphic_mode=graphic_mode,
+        # GH.scatter_plot_generator(graphic_mode=graphic_mode,
+        #                           features=validation_features,
+        #                           feature_1_name=feature_1,
+        #                           feature_2_name=feature_2,
+        #                           labels=predicted)
+        GH.scatter_plot_generator_3D(graphic_mode=graphic_mode,
                                   features=validation_features,
                                   feature_1_name=feature_1,
                                   feature_2_name=feature_2,
+                                  feature_3_name=feature_3,
                                   labels=predicted)
         #
         predicted_scores.append(accuracy_score)
@@ -120,11 +129,17 @@ if MLM == '1':
     predicted = nb.predict(feature_array=dft)
     #
     # Plot graph of estimated values
-    GH.scatter_plot_generator(graphic_mode=1,
-                              features=dft,
-                              feature_1_name=feature_1,
-                              feature_2_name=feature_2,
-                              labels=predicted)
+    # GH.scatter_plot_generator(graphic_mode=1,
+    #                           features=dft,
+    #                           feature_1_name=feature_1,
+    #                           feature_2_name=feature_2,
+    #                           labels=predicted)
+    GH.scatter_plot_generator_3D(graphic_mode=1,
+                                 features=dft,
+                                 feature_1_name=feature_1,
+                                 feature_2_name=feature_2,
+                                 feature_3_name=feature_3,
+                                 labels=predicted)
     #
 elif MLM == '2':
     #
@@ -157,11 +172,11 @@ elif MLM == '2':
         i = 1
         for row in df:
             if i >= counter - k_fold and i < counter:
-                validation_features.append([row[0], row[1]])
-                validation_labels.append(row[2])
+                validation_features.append([row[0], row[1], row[2]])
+                validation_labels.append(row[3])
             else:
-                train_features.append([row[0], row[1]])
-                train_labels.append(row[2])
+                train_features.append([row[0], row[1], row[2]])
+                train_labels.append(row[3])
             i += 1
         #
         svm = SVM(features_matrix=train_features,
@@ -181,11 +196,17 @@ elif MLM == '2':
                                                       predicted=predicted)
         #
         # Plot graph of estimated values
-        GH.scatter_plot_generator(graphic_mode=graphic_mode,
-                                  features=validation_features,
-                                  feature_1_name=feature_1,
-                                  feature_2_name=feature_2,
-                                  labels=predicted)
+        # GH.scatter_plot_generator(graphic_mode=graphic_mode,
+        #                           features=validation_features,
+        #                           feature_1_name=feature_1,
+        #                           feature_2_name=feature_2,
+        #                           labels=predicted)
+        GH.scatter_plot_generator_3D(graphic_mode=graphic_mode,
+                                     features=validation_features,
+                                     feature_1_name=feature_1,
+                                     feature_2_name=feature_2,
+                                     feature_3_name=feature_3,
+                                     labels=predicted)
         #
         predicted_scores.append(accuracy_score)
         print('K_Fold sample accuracy: [' + str(accuracy_score) + ']')
@@ -200,11 +221,17 @@ elif MLM == '2':
     predicted = svm.predict(feature_array=dft)
     #
     # Plot graph of estimated values
-    GH.scatter_plot_generator(graphic_mode=1,
-                              features=dft,
-                              feature_1_name=feature_1,
-                              feature_2_name=feature_2,
-                              labels=predicted)
+    # GH.scatter_plot_generator(graphic_mode=1,
+    #                           features=dft,
+    #                           feature_1_name=feature_1,
+    #                           feature_2_name=feature_2,
+    #                           labels=predicted)
+    GH.scatter_plot_generator_3D(graphic_mode=1,
+                                 features=dft,
+                                 feature_1_name=feature_1,
+                                 feature_2_name=feature_2,
+                                 feature_3_name=feature_3,
+                                 labels=predicted)
 elif MLM == '3':
     pass
 elif MLM == '4':
