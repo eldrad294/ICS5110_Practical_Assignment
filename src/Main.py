@@ -258,7 +258,7 @@ elif MLM == '3':
         lr = LogisticRegressor(features_matrix=train_features,
                                 labels=train_labels)
         #
-        # Trains the Naive Bayes classifier using the data we passed
+        # Trains the Logistic Regression classifier using the data we passed
         lr.fit_training_set()
         #
         # We use the validation set of data to test our classifier
