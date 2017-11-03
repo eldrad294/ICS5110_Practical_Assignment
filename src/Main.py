@@ -3,6 +3,7 @@
 from src.Data_Loader.Load_data import Data_Loader
 from src.Machine_Learning.Naive_Bayes import Naive_Bayes
 from src.Machine_Learning.Support_Vector_Machine import SVM
+from src.Machine_Learning.Logistic_Regression import LogisticRegressor
 import src.Graph_Handles.Graph_Handler as GH
 #
 allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch','Ticket', 'Fare', 'Embarked']
@@ -58,7 +59,8 @@ dft = data_loader_obj.get_data()
 while True:
     MLM = input('Enter which machine learning method to utilise as follows:'
                 '\n1..Naive Bayes Classification'
-                '\n2..Support Vector Machine Classification')
+                '\n2..Support Vector Machine Classification'
+                '\n3..Logistic Regression Classification')
     try:
         if int(MLM) >= 0 and int(MLM) < 5:
             break
@@ -234,7 +236,75 @@ elif MLM == '2':
                                  labels=predicted)
 #
 elif MLM == '3':
-    pass
+    while counter < len(df):
+        #
+        # Split original dataframe into the training, and testing sample
+        validation_features = []
+        validation_labels = []
+        train_features = []
+        train_labels = []
+        #
+        # Populate test_df and train_df respectively
+        i = 1
+        for row in df:
+            if i >= counter-k_fold and i < counter:
+                validation_features.append([row[0],row[1], row[2]])
+                validation_labels.append(row[3])
+            else:
+                train_features.append([row[0],row[1], row[2]])
+                train_labels.append(row[3])
+            i += 1
+        #
+        lr = LogisticRegressor(features_matrix=train_features,
+                                labels=train_labels)
+        #
+        # Trains the Naive Bayes classifier using the data we passed
+        lr.fit_training_set()
+        #
+        # We use the validation set of data to test our classifier
+        predicted = lr.predict(feature_array=validation_features)
+        #
+        # We calculate the accuracy score of the sample run
+        accuracy_score = lr.calculate_accuracy_score(labels=validation_labels,
+                                                     predicted=predicted)
+        #
+        # Plot graph of estimated values
+        # GH.scatter_plot_generator(graphic_mode=graphic_mode,
+        #                           features=validation_features,
+        #                           feature_1_name=feature_1,
+        #                           feature_2_name=feature_2,
+        #                           labels=predicted)
+        GH.scatter_plot_generator_3D(graphic_mode=graphic_mode,
+                                      features=validation_features,
+                                      feature_1_name=feature_1,
+                                      feature_2_name=feature_2,
+                                      feature_3_name=feature_3,
+                                      labels=predicted)
+        #
+        predicted_scores.append(accuracy_score)
+        print('K_Fold sample accuracy: [' + str(accuracy_score) + ']')
+        counter += 10
+    #
+    # Calculates the mean predicted score based off all the tests
+    overall_score = sum(predicted_scores)/len(predicted_scores)
+    print('Logistic Regression mean score of: ['+str(overall_score)+']')
+    #
+    # We use the testing set of data on the classifier that has been trained
+    predicted = lr.predict(feature_array=dft)
+    #
+    # Plot graph of estimated values
+    # GH.scatter_plot_generator(graphic_mode=1,
+    #                           features=dft,
+    #                           feature_1_name=feature_1,
+    #                           feature_2_name=feature_2,
+    #                           labels=predicted)
+    GH.scatter_plot_generator_3D(graphic_mode=1,
+                                 features=dft,
+                                 feature_1_name=feature_1,
+                                 feature_2_name=feature_2,
+                                 feature_3_name=feature_3,
+                                 labels=predicted)
+    #
 elif MLM == '4':
     pass
 #
