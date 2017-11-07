@@ -1,5 +1,6 @@
 import pandas as pd
 import src.Data_Loader.Data_cleaner as dc
+from src.Feature_Selection.Pearson_Correlation_Coefficient import PearsonCoefficient
 #
 class Data_Loader:
     #
@@ -24,4 +25,11 @@ class Data_Loader:
         elif self.data_mode == "test":
             df = dc.clean_data_frame(self.df[[self.feature_1, self.feature_2, self.feature_3]])
         return df
+    #
+    def suggest_features(self):
+        #
+        # Calculate Correlation Matrix on features and suggest them to user
+        print("Calculating Correlation Matrix")
+        PearsonCoefficient(df=self.df)
+
 

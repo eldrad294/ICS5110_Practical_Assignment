@@ -8,6 +8,13 @@ import src.Graph_Handles.Graph_Handler as GH
 #
 allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch','Ticket', 'Fare', 'Embarked']
 #
+# Load the training data frame to display matrix correlation. We load the constructor with dummy values since python
+# doesn't support overloaded constructors.
+Data_Loader(feature_1='dummy',
+            feature_2='dummy',
+            feature_3='dummy',
+            data_mode="train").suggest_features()
+#
 # Enter 2 Features, and data_mode [Train/Test]
 while True:
     feature_1 = input("Enter first feature: ").lower().title()

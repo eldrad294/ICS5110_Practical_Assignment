@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 #
 def clean_data_frame(df):
     """ Converts the data in proper, readable format. """
@@ -61,6 +62,11 @@ def check_gender_and_convert(df):
             row[2] = normalize_sex(row[2])
     #
     return df
+# def check_gender_and_convert(df):
+#     """ Makes a check for the feature 'Sex', and if found, normalizes it to 0,1 """
+#     gender = {"male":0,"female":1}
+#     df['Sex'] = df['Sex'].map(gender)
+#     return df
 #
 def check_embarked_and_convert(df):
     """ Makes a check for the feature 'Embarked', and if found, normalizes it to 0,1,2 """
