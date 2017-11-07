@@ -10,10 +10,12 @@ allowed_features = ['Passengerid','Survived','Pclass','Sex','Age','Sibsp','Parch
 #
 # Load the training data frame to display matrix correlation. We load the constructor with dummy values since python
 # doesn't support overloaded constructors.
-Data_Loader(feature_1='dummy',
-            feature_2='dummy',
-            feature_3='dummy',
-            data_mode="train").suggest_features()
+data_loader_obj = Data_Loader(feature_1='dummy',
+                              feature_2='dummy',
+                              feature_3='dummy',
+                              data_mode=None)
+df = data_loader_obj.get_data()
+data_loader_obj.suggest_features(df=df)
 #
 # Enter 2 Features, and data_mode [Train/Test]
 while True:

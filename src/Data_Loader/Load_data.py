@@ -10,7 +10,7 @@ class Data_Loader:
         self.feature_3 = feature_3
         self.data_mode = data_mode
         #
-        if self.data_mode == "train":
+        if self.data_mode == "train" or self.data_mode is None:
             self.df = pd.read_csv('../data/train.csv')
         elif self.data_mode == "test":
             self.df = pd.read_csv('../data/test.csv')
@@ -22,14 +22,16 @@ class Data_Loader:
         """ Retrieves data based on pre-selected features, cleans it, and calculates the k-fold """
         if self.data_mode == "train":
             df = dc.clean_data_frame(self.df[[self.feature_1, self.feature_2, self.feature_3, "Survived"]])
+        elif self.data_mode is None:
+            df = dc.PC_clean_data_frame(self.df)
         elif self.data_mode == "test":
             df = dc.clean_data_frame(self.df[[self.feature_1, self.feature_2, self.feature_3]])
         return df
     #
-    def suggest_features(self):
+    def suggest_features(self, df):
         #
         # Calculate Correlation Matrix on features and suggest them to user
         print("Calculating Correlation Matrix")
-        PearsonCoefficient(df=self.df)
+        PearsonCoefficient(df=df)
 
 

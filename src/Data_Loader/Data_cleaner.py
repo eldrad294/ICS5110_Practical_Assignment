@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 #
 def clean_data_frame(df):
     """ Converts the data in proper, readable format. """
@@ -16,6 +15,16 @@ def clean_data_frame(df):
     # Check for embarked feature, and convert it
     df = check_embarked_and_convert(df=df)
     #
+    return df
+#
+def PC_clean_data_frame(df):
+    """ Clean data frame enough to for Pearson Coefficient Calc """
+    mapping_gender = {'male':0,'female':1}
+    mapping_embarkment = {'C':0,'S':1,'Q':2}
+    # df['Sex'] = df['Sex'].apply(lambda x: mapping_gender[x])
+    # df['Embarked'] = df['Embarked'].apply(lambda x: mapping_embarkment[x])
+    df['Sex'] = df['Sex'].map(mapping_gender)
+    df['Embarked'] = df['Embarked'].map(mapping_embarkment)
     return df
 #
 def remove_missing_data(df):
