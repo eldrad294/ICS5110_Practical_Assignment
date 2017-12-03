@@ -12,7 +12,7 @@ class GraphFactory():
         #
         x1, x2, Y = np.asarray(f1), np.asarray(f2), np.asarray(Y)
         #
-        for i in range(100):
+        for i in range(10000):
             plt.scatter(x1[i], x2[i], c='b' if Y[i] == 0 else 'r')
         #
         plt.title('Scatter plot ' + f1.columns.values + ' vs ' + f2.columns.values)
