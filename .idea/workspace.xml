@@ -2,73 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55de083d-4689-485b-ae38-82fc1a316604" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['AF4'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['AF4'] vs ['P7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F3'] vs ['F7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F4'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F4'] vs ['O1'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F4'] vs ['O2'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F8'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F8'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F8'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['F8'] vs ['P8'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['FC'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['FC'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['FC'] vs ['P8'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['O1'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['O1'] vs ['T7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['O2'] vs ['F7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['P7'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['P8'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['T7'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['T8'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['T8'] vs ['O1'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (95% Confidence Intervals)/Scatter plot ['T8'] vs ['O2'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['AF4'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['AF4'] vs ['P7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F3'] vs ['F7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F4'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F4'] vs ['O1'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F4'] vs ['O2'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F8'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F8'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F8'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['F8'] vs ['P8'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['FC'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['FC'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['FC'] vs ['P8'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['O1'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['O1'] vs ['T7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['O2'] vs ['F7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['P7'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['P8'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['T7'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['T8'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['T8'] vs ['O1'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (99% Confidence Intervals)/Scatter plot ['T8'] vs ['O2'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['AF4'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['AF4'] vs ['P7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F3'] vs ['F7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F4'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F4'] vs ['O1'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F4'] vs ['O2'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F8'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F8'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F8'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['F8'] vs ['P8'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['FC'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['FC'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['FC'] vs ['P8'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['O1'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['O1'] vs ['T7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['O2'] vs ['F7'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['P7'] vs ['F3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['P8'] vs ['AF3'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['T7'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['T8'] vs ['FC'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['T8'] vs ['O1'].png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/EEG Scatter Plots (Raw)/Scatter plot ['T8'] vs ['O2'].png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/Correlation Matrix.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/visuals/Pearson's Coeffecient of Correlation/Correlation Matrix.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.py" afterPath="$PROJECT_DIR$/src/Main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/visual_handles/Graph_Factory.py" afterPath="$PROJECT_DIR$/src/visual_handles/Graph_Factory.py" />
     </list>
     <ignored path="ICS5110_Practical_Assignment.iws" />
@@ -92,8 +29,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="153">
+              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -101,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="statistics.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="statistics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/statistics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -113,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph_Factory.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Graph_Factory.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/visual_handles/Graph_Factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="17" column="115" selection-start-line="17" selection-start-column="115" selection-end-line="17" selection-end-column="115" />
+            <state relative-caret-position="274">
+              <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -191,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,6 +195,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -493,7 +430,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14842904" sideWeight="0.50421494" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19176598" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41495124" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
@@ -506,6 +442,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -534,11 +471,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Graph_Handles/Graph_Handler.py" />
-    <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Naive_Bayes.py" />
-    <entry file="file://$PROJECT_DIR$/src/Data_Loader/Load_data.py" />
-    <entry file="file://$PROJECT_DIR$/src/Data_Loader/Data_cleaner.py" />
-    <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Support_Vector_Machine.py" />
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -629,50 +561,75 @@
     <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Support_Vector_Machine.py" />
     <entry file="file://$PROJECT_DIR$/src/Data_Loader/Load_data.py" />
     <entry file="file://$PROJECT_DIR$/src/Feature_Selection/Pearson_Correlation_Coefficient.py" />
-    <entry file="file://$PROJECT_DIR$/src/data_loader/Data_Formatter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Loader/Data_cleaner.py" />
     <entry file="file://$PROJECT_DIR$/visuals/Scatter plot ['AF3'] vs ['F7'].png" />
     <entry file="file://$PROJECT_DIR$/visuals/Scatter plot ['T7'] vs ['FC'].png" />
     <entry file="file://$PROJECT_DIR$/src/stats/statistics.py" />
     <entry file="file://$PROJECT_DIR$/visuals/Scatter plot ['F3'] vs ['F7'].png" />
-    <entry file="file://$PROJECT_DIR$/src/util/statistics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/visuals/Correlation Matrix.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.py">
+    <entry file="file://$PROJECT_DIR$/src/data_loader/Data_Formatter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visuals/Correlation Matrix.png">
+    <entry file="file://$PROJECT_DIR$/visuals/Correlation Matrix with 0.98% outliers excluded.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/Correlation Matrix with 0.96% outliers excluded.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/Correlation Matrix with 0.99% outliers excluded.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/Correlation Matrix with 0.95% outliers excluded.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/Correlation Matrix with None% outliers excluded.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/visual_handles/Graph_Factory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="17" column="115" selection-start-line="17" selection-start-column="115" selection-end-line="17" selection-end-column="115" />
+        <state relative-caret-position="274">
+          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/statistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

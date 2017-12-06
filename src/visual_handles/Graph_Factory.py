@@ -37,14 +37,16 @@ class GraphFactory():
     def correlation_matrix(self, df, display, confidence_interval=None):
         """ Plots Correlation Matrix """
         #
-        #temp_lists = []
-        # if confidence_interval is not None:
-        #     for column in df:
-        #         confidence_interval_min, confidence_interval_max = st.get_confidence_interval(column, column.columns.values, confidence_interval)
-        #         temp_list = []
-        #         [temp_list.append(value) for value in column if value >= confidence_interval_min and value <= confidence_interval_max]
-        #         temp_lists.append(temp_list)
-        # df = pd.DataFrame(temp_lists,columns=df.columns.values)
+        # Prune dataframe if confidence_interval is declared
+        if confidence_interval is not None:
+            for column in df:
+                min_confidence_interval, max_confidence_interval = st.get_confidence_interval(df[[column]],column,confidence_interval)
+                df_c = []
+                for value in df[column]:
+                    if value >= min_confidence_interval and value <= max_confidence_interval:
+                        df_c.append(value)
+                df[column] = pd.DataFrame({column: df_c})
+        #
         f, ax = plt.subplots(figsize=(12, 12))
         corr = df.corr()
         sns.heatmap(corr, mask=np.zeros_like(corr, dtype=np.bool), cmap=sns.diverging_palette(220, 10, as_cmap=True),
@@ -53,4 +55,4 @@ class GraphFactory():
         if display is True:
             plt.show()
         else:
-            plt.savefig(self.save_path + 'Correlation Matrix.png')
+            plt.savefig(self.save_path + 'Correlation Matrix with ' + str(confidence_interval) + '% outliers excluded.png')

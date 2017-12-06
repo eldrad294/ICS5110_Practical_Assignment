@@ -6,7 +6,9 @@ df = Data_Formatter('../data/EEG/EEGEyeState.csv').get_df()
 gf = GraphFactory('../visuals/')
 #
 # Generate correlation matrix
-gf.correlation_matrix(df=df, display=False, confidence_interval=None)
+# gf.correlation_matrix(df=df, display=False, confidence_interval=None)
+gf.correlation_matrix(df=df, display=False, confidence_interval=.99)
+# gf.correlation_matrix(df=df, display=False, confidence_interval=.99)
 #
 # Generate scatter plot graphs
 # if __name__ == '__main__':
