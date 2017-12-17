@@ -41,3 +41,7 @@ class GraphFactory():
             plt.show()
         else:
             plt.savefig(self.save_path + 'Correlation Matrix with ' + str(confidence_interval) + '% outliers excluded.png')
+    #
+    def scree_plot(self):
+        """ Plots a scree graph """
+        pass
