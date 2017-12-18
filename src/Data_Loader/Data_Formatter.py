@@ -13,6 +13,10 @@ class Data_Formatter:
         """ Returns data frame """
         return self.df
     #
+    def get_df_header(self):
+        """ Returns data frame header """
+        return self.df.columns
+    #
     def get_confidence_df(self, confidence_interval):
         """ Returns data frame with excluded outliers """
         if confidence_interval is not None:

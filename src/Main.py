@@ -1,4 +1,4 @@
-from src.data_loader.Data_Formatter import Data_Formatter
+from src.Data_Loader.Data_Formatter import Data_Formatter
 from src.visual_handles.Graph_Factory import GraphFactory
 from multiprocessing import Process
 #
