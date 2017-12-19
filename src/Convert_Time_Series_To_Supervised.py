@@ -1,5 +1,5 @@
 import seaborn as sns
-from pandas import DataFrame, concat
+from pandas import DataFrame, concat, Series
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -43,13 +43,23 @@ df_headers = df.columns
 featureCount = 14
 #
 # N-Step Univariate Forecasting Shift
-shifted_df = series_to_supervised(data=df, n_in=1, n_out=1, dropnan=True)
+lag = 1
+shifted_df = series_to_supervised(data=df, n_in=lag, n_out=1, dropnan=True)
 shifted_df_headers = shifted_df.columns
 shifted_feature_count = len(shifted_df_headers)
 #
+# Converting shifted dataframe into separate feature and label dataframes
+shifted_df_X = shifted_df.drop('var15(t)', 1)
+for i in range(1,lag+1):
+    column = 'var15(t-' + str(i) + ')'
+    shifted_df_X = shifted_df_X.drop(column, 1)
+shifted_columns = shifted_df_X.columns
+shifted_df_X_count = len(shifted_columns)
+shifted_df_X = shifted_df_X.values
+shifted_df_y = shifted_df[['var15(t)']].values
+#
 # Plot Pearson's Correlation Matrix for shifted_df
-print(shifted_df_headers)
-eegDF = pd.DataFrame(data=shifted_df[0:shifted_feature_count], columns=shifted_df_headers[0:shifted_feature_count])
+eegDF = pd.DataFrame(data=shifted_df_X[0:shifted_df_X_count], columns=shifted_columns[0:shifted_df_X_count])
 #
 # Compute the correlation matrix
 corr = eegDF.corr()
@@ -87,7 +97,7 @@ def plotBoxPlots(data, arrLabels, titleSuffix):
     fig.set_figwidth(30)
     fig.set_figheight(30)
 
-    ax1 = fig.add_subplot(2, 1, 1)
+    ax1 = fig.add_subplot(1, 1, 1)
     ax1.set_title('Feature range: full - ' + titleSuffix)
     suppress = ax1.boxplot(data
                            , sym='b.'
@@ -98,8 +108,12 @@ def plotBoxPlots(data, arrLabels, titleSuffix):
                            , showbox=True
                            , showfliers=True
                            )
+    plt.show()
     #
-    ax2 = fig.add_subplot(2, 1, 2)
+    fig = plt.figure()
+    fig.set_figwidth(30)
+    fig.set_figheight(30)
+    ax2 = fig.add_subplot(1, 1, 1)
     ax2.set_title('Feature range: [5%, 95%] - ' + titleSuffix)
     suppress = ax2.boxplot(data
                            , sym='b.'
@@ -112,15 +126,12 @@ def plotBoxPlots(data, arrLabels, titleSuffix):
                            )
     plt.show()
 #
-# Stripping off Y column ('eyeDetection') from dataframe
-shifted_df_wo_Y = shifted_df.drop('var15(t)', 1)
-shifted_df_wo_Y = shifted_df_wo_Y.drop('var15(t-1)', 1)
-shifted_df_wo_Y_count = len(shifted_df_wo_Y.columns)
+# Removing Outliers
 outLierIndexes = set()
 upperLimit = 5000
-for x in range(shifted_df_wo_Y_count):
-    shifted_df_wo_Y = np.array(shifted_df_wo_Y)
-    outLiers = np.where(shifted_df_wo_Y[:, x] > upperLimit)[0]
+for x in range(shifted_df_X_count):
+    shifted_df_X = np.array(shifted_df_X)
+    outLiers = np.where(shifted_df_X[:, x] > upperLimit)[0]
     if len(outLiers) > 0:
         [(outLierIndexes.add(outLiers[i])) for i in range(len(outLiers))]
 #
@@ -128,9 +139,35 @@ outLierIndexes = list(outLierIndexes)
 outLierIndexes.sort()
 print('Extreme outliers\nTotal:   ', len(outLierIndexes), \
     '\nIndexes: ', outLierIndexes)
-[(print(DataFrame(shifted_df_wo_Y).iloc[[outlier]])) for outlier in outLierIndexes]
+[(print(DataFrame(shifted_df_X).iloc[[outlier]])) for outlier in outLierIndexes]
 #
-eegDataNoOutLiers = np.delete(shifted_df_wo_Y, outLierIndexes, 0)
-plotBoxPlots(eegDataNoOutLiers[:, 0:shifted_df_wo_Y_count],
-             shifted_df[0:shifted_df_wo_Y_count],
+eegDataNoOutLiers_X = np.delete(shifted_df_X, outLierIndexes, 0)
+eegDataNoOutLiers_y = np.delete(shifted_df_y, outLierIndexes, 0)
+plotBoxPlots(shifted_df_X[:, 0:shifted_df_X_count],
+             shifted_columns,
              'Extreme outliers excluded')
+shifted_df_X = eegDataNoOutLiers_X
+shifted_df_y = eegDataNoOutLiers_y
+#
+# Autocorrelation Plot
+# https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/
+#
+series = Series.from_csv(path, header=0)
+from statsmodels.graphics.tsaplots import plot_acf
+lag = None
+plot_acf(series, lags=lag)
+plt.show()
+#
+# Feature Selection using RandomForests
+# https://towardsdatascience.com/running-random-forests-inspect-the-feature-importances-with-this-code-2b00dd72b92e
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier()
+X_train = shifted_df_X
+y_train = shifted_df_y
+# print(X_train[-1])
+# print(y_train[-1])
+rf.fit(X_train, y_train)
+feature_importances = pd.DataFrame(rf.feature_importances_,
+                                   index = shifted_columns,
+                                    columns=['importance']).sort_values('importance', ascending=False)
+print(feature_importances)
