@@ -51,7 +51,7 @@ def get_outlier_indexes(df, df_count, outlier_value=5000):
     outLierIndexes.sort()
     return outLierIndexes
 #
-path = '../data/EEG/EEGEyeState.csv'
+path = 'EEGEyeState.csv'
 df = pd.read_csv(path)
 df_headers = df.columns
 featureCount = 14
@@ -100,7 +100,7 @@ plt.show()
 #
 # Store the upper triangle of the correlation matrix into an Excel sheet
 corrUpperTri = corr.where(mask)
-writer = pd.ExcelWriter('../data/EEG/EEG_Shifted_Correlation_Matrix.xlsx')
+writer = pd.ExcelWriter('EEG_Shifted_Correlation_Matrix.xlsx')
 corrUpperTri.to_excel(writer, 'CorrelationMatrix')
 writer.save()
 #
@@ -134,7 +134,7 @@ plt.show()
 #
 # Store the upper triangle of the correlation matrix into an Excel sheet
 corrUpperTri = corr.where(mask)
-writer = pd.ExcelWriter('../data/EEG/EEG_Shifted_Correlation_Matrix_without_outliers.xlsx')
+writer = pd.ExcelWriter('EEG_Shifted_Correlation_Matrix_without_outliers.xlsx')
 corrUpperTri.to_excel(writer, 'CorrelationMatrix')
 writer.save()
 #
