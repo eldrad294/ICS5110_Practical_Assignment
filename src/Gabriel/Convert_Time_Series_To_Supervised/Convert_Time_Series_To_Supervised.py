@@ -57,7 +57,7 @@ df_headers = df.columns
 featureCount = 14
 #
 # N-Step Univariate Forecasting Shift
-lag = 3
+lag = 0
 shifted_df = series_to_supervised(data=df, n_in=lag, n_out=1, dropnan=True)
 shifted_df_headers = shifted_df.columns
 shifted_feature_count = len(shifted_df_headers)
@@ -217,3 +217,5 @@ feature_importance = np.array(feature_importances)
 plt.bar(y_pos, feature_importance, align='center', alpha=0.5)
 plt.xticks(y_pos, objects)
 plt.show()
+#
+# Plot Scatter plots for Top N Features of Importance
