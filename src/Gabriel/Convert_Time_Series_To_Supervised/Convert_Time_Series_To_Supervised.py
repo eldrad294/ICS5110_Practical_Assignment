@@ -191,8 +191,10 @@ shifted_df_y = eegDataNoOutLiers_y
 # https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/
 #
 series = Series.from_csv(path, header=0)
+print(series.values)
 from statsmodels.graphics.tsaplots import plot_acf
-lag = None
+if lag == 0:
+    lag = None
 plot_acf(series, lags=lag)
 plt.show()
 #

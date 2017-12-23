@@ -24,3 +24,6 @@ class Scoring_Functions():
     def f_measure(self):
         # http://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score
         return str(f1_score(self.y_true, self.y_pred, average='weighted') * 100) + '%'
+    #
+    def scoring_results(self):
+        return "Accuracy: " + str(self.accuracy()) + "\nPrecision: " + str(self.precision()) + "\nRecall: " + str(self.recall()) + "\nFMeasure: " + str(self.f_measure())
