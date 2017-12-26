@@ -57,7 +57,7 @@ df_headers = df.columns
 featureCount = 14
 #
 # N-Step Univariate Forecasting Shift
-lag = 0
+lag = 4
 shifted_df = series_to_supervised(data=df, n_in=lag, n_out=1, dropnan=True)
 shifted_df_headers = shifted_df.columns
 shifted_feature_count = len(shifted_df_headers)
@@ -201,6 +201,8 @@ plt.show()
 # Feature Selection using RandomForests
 # https://towardsdatascience.com/running-random-forests-inspect-the-feature-importances-with-this-code-2b00dd72b92e
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import RFE
+from sklearn.ensemble import RandomForestRegressor
 rf = RandomForestClassifier(n_estimators=500)
 X_train = shifted_df_X
 y_train = shifted_df_y

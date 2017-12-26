@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55de083d-4689-485b-ae38-82fc1a316604" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/EEGEyeState.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/SVR_Classification.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Classification/Findings/Classification Results.xlsx" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/Findings/Classification Results.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/EEG_Shifted_Correlation_Matrix.xlsx" afterPath="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/EEG_Shifted_Correlation_Matrix.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/EEG_Shifted_Correlation_Matrix_without_outliers.xlsx" afterPath="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/EEG_Shifted_Correlation_Matrix_without_outliers.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/Convert_Time_Series_To_Supervised.py" afterPath="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/Convert_Time_Series_To_Supervised.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/statistics/scoring_functions.py" afterPath="$PROJECT_DIR$/src/statistics/scoring_functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/01_TimeSeriesToSupervisedLearningProblem/TimeSeriesToSupervisedLearningProblem.ipynb" afterPath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/01_TimeSeriesToSupervisedLearningProblem/TimeSeriesToSupervisedLearningProblem.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/02_TimeSeriesFeatureSelection_UnivariateDataset/TimeSeriesFeatureSelection_UnivariateDataset.ipynb" afterPath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/02_TimeSeriesFeatureSelection_UnivariateDataset/TimeSeriesFeatureSelection_UnivariateDataset.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/03_BasicFeatureEngineeringWithTimeSeriesData/BasicFeatureEngineeringWithTimeSeriesData.ipynb" afterPath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/03_BasicFeatureEngineeringWithTimeSeriesData/BasicFeatureEngineeringWithTimeSeriesData.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/04_BacktestMachineLearningModelsForTimeSeriesForecasting/BacktestMachineLearningModelsForTimeSeriesForecasting.ipynb" afterPath="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/04_BacktestMachineLearningModelsForTimeSeriesForecasting/BacktestMachineLearningModelsForTimeSeriesForecasting.ipynb" />
     </list>
     <ignored path="ICS5110_Practical_Assignment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +37,8 @@
       <file leaf-file-name="Convert_Time_Series_To_Supervised.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/Convert_Time_Series_To_Supervised.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
+            <state relative-caret-position="-629">
+              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -42,8 +49,44 @@
       <file leaf-file-name="SVM_Classification.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+            <state relative-caret-position="429">
+              <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LDA_Classification.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Logistic_Regression_Classification.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SVR_Classification.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/SVR_Classification.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -54,7 +97,7 @@
       <file leaf-file-name="scoring_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/statistics/scoring_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="425">
               <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="104" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -101,21 +144,25 @@
         <option value="$PROJECT_DIR$/src/Data_Loader/Data_Formatter.py" />
         <option value="$PROJECT_DIR$/src/Convert_Time_Series_To_Supervised.py" />
         <option value="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised.py" />
-        <option value="$PROJECT_DIR$/src/Nicholas/EEGDataAnalysis/EEGDataAnalysis.ipynb" />
         <option value="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised.ipynb" />
         <option value="$PROJECT_DIR$/src/Gabriel/Visualize_Time_Shifted_Feature_Importance/Visualize_Time_Shifted_Feature_Importance.py" />
         <option value="$PROJECT_DIR$/src/Gabriel/Classification/Scoring_Functions.py" />
         <option value="$PROJECT_DIR$/src/statistics/scoring_functions.py" />
-        <option value="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" />
+        <option value="$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py" />
+        <option value="$PROJECT_DIR$/src/Gabriel/Classification/SVR_Classification.py" />
+        <option value="$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py" />
+        <option value="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/02_TimeSeriesFeatureSelection_UnivariateDataset/TimeSeriesFeatureSelection_UnivariateDataset.ipynb" />
+        <option value="$PROJECT_DIR$/src/Nicholas/EEGDataAnalysis/EEGDataAnalysis.ipynb" />
         <option value="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/Convert_Time_Series_To_Supervised.py" />
+        <option value="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -142,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -212,6 +258,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Nicholas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICS5110_Practical_Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICS5110_Practical_Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nicholas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EEGDataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICS5110_Practical_Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICS5110_Practical_Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Gabriel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -235,28 +321,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Convert_Time_Series_To_Supervised" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ICS5110_Practical_Assignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ICS5110_Practical_Assignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gabriel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Classification" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,6 +368,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,57 +388,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.SVM_Classification">
-    <configuration default="false" name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ICS5110_Practical_Assignment" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Convert_Time_Series_To_Supervised" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ICS5110_Practical_Assignment" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Convert_Time_Series_To_Supervised.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Convert_Time_Series_To_Supervised (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Gabriel" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ICS5110_Practical_Assignment" />
-      <option name="SCRIPT_NAME" value="D:\Projects\ICS5110_Practical_Assignment\src\Gabriel\Convert_Time_Series_To_Supervised\Convert_Time_Series_To_Supervised.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Convert_Time_Series_To_Supervised (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -404,6 +418,57 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ICS5110_Practical_Assignment" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SVR_Classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Gabriel/Classification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ICS5110_Practical_Assignment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Gabriel/Classification/SVR_Classification.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Logistic_Regression_Classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Gabriel/Classification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ICS5110_Practical_Assignment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LDA_Classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Gabriel/Classification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ICS5110_Practical_Assignment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -543,19 +608,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Convert_Time_Series_To_Supervised" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Convert_Time_Series_To_Supervised (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Convert_Time_Series_To_Supervised (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.SVM_Classification" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Convert_Time_Series_To_Supervised (2)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.SVM_Classification" />
+      <item index="2" class="java.lang.String" itemvalue="Python.SVR_Classification" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Logistic_Regression_Classification" />
+      <item index="4" class="java.lang.String" itemvalue="Python.LDA_Classification" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.SVM_Classification" />
         <item index="1" class="java.lang.String" itemvalue="Python.Convert_Time_Series_To_Supervised (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Convert_Time_Series_To_Supervised" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Convert_Time_Series_To_Supervised (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.LDA_Classification" />
+        <item index="3" class="java.lang.String" itemvalue="Python.SVR_Classification" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Logistic_Regression_Classification" />
       </list>
     </recent_temporary>
   </component>
@@ -576,15 +641,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1963434" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17597471" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14842904" sideWeight="0.50421494" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19176598" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25259516" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524377" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.50508904" order="2" side_tool="true" content_ui="tabs" />
@@ -623,28 +688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Support_Vector_Machine.py" />
-    <entry file="file://$PROJECT_DIR$/src/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="123" column="77" selection-start-line="123" selection-start-column="77" selection-end-line="123" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Naive_Bayes.py" />
-    <entry file="file://$PROJECT_DIR$/src/Data_Loader/Load_data.py" />
-    <entry file="file://$PROJECT_DIR$/src/Data_Loader/Data_cleaner.py" />
-    <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Support_Vector_Machine.py" />
-    <entry file="file://$PROJECT_DIR$/src/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="123" column="77" selection-start-line="123" selection-start-column="77" selection-end-line="123" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Naive_Bayes.py" />
-    <entry file="file://$PROJECT_DIR$/src/Data_Loader/Load_data.py" />
-    <entry file="file://$PROJECT_DIR$/src/Data_Loader/Data_cleaner.py" />
     <entry file="file://$PROJECT_DIR$/src/Machine_Learning/Support_Vector_Machine.py" />
     <entry file="file://$PROJECT_DIR$/src/Main.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -726,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Nicholas/EEGDataAnalysis/EEGDataAnalysis.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised.ipynb" />
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Visualize_Time_Shifted_Feature_Importance/EEGEyeState.csv" />
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Visualize_Time_Shifted_Feature_Importance/Visualize_Time_Shifted_Feature_Importance.py" />
@@ -740,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,21 +783,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="546" column="0" selection-start-line="546" selection-start-column="0" selection-end-line="546" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/Scoring_Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="169" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/Scoring_Functions.py" />
     <entry file="file://$PROJECT_DIR$/src/statistics/scoring_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="425">
           <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="104" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
@@ -770,20 +797,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/Convert_Time_Series_To_Supervised.py">
+    <entry file="file://C:/Anaconda/Lib/site-packages/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2719">
+          <caret line="1146" column="17" selection-start-line="1146" selection-start-column="17" selection-end-line="1146" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/04_BacktestMachineLearningModelsForTimeSeriesForecasting/BacktestMachineLearningModelsForTimeSeriesForecasting.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/01_TimeSeriesToSupervisedLearningProblem/TimeSeriesToSupervisedLearningProblem.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/03_BasicFeatureEngineeringWithTimeSeriesData/BasicFeatureEngineeringWithTimeSeriesData.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/02_TimeSeriesFeatureSelection_UnivariateDataset/TimeSeriesFeatureSelection_UnivariateDataset.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/01_TimeSeriesToSupervisedLearningProblem/EEGEyeState.arff.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nicholas/EEGDataAnalysis/EEGDataAnalysis.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/Convert_Time_Series_To_Supervised.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-629">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/SVR_Classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/sklearn/model_selection/_split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="1903" column="4" selection-start-line="1903" selection-start-column="4" selection-end-line="1903" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+        <state relative-caret-position="429">
+          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>

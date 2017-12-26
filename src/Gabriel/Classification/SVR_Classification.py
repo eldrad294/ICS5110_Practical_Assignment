@@ -2,9 +2,9 @@ from pandas import DataFrame, concat
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.model_selection import GridSearchCV
-from src.statistics.scoring_functions import Scoring_Functions
 from sklearn import svm
+from src.statistics.scoring_functions import Scoring_Functions
+from sklearn.preprocessing import normalize
 #
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     """
@@ -57,10 +57,10 @@ path = 'EEGEyeState.csv'
 df = pd.read_csv(path)
 #
 # N-Step Univariate Forecasting Shift
-lag = 0
+lag = 5
 shifted_df = series_to_supervised(data=df, n_in=lag, n_out=1, dropnan=True)
 #
-# Taking only the top 5 relevant features (Lag 0 - 6) Per RandomForest Feature Importance Grading
+# Taking only the top 5 relevant features (Lag 0 - 6)
 important_columns = [['var7(t)','var6(t)','var2(t)','var13(t)','var14(t)','var15(t)'],
                      ['var7(t)','var7(t-1)','var6(t-1)','var6(t)','var2(t-1)','var15(t)'],
                      ['var7(t-2)','var7(t)','var6(t-2)','var7(t-1)','var6(t)','var15(t)'],
@@ -94,25 +94,22 @@ print('Size of features: ' + str(len(shifted_df_X)) + '\nSize of labels: ' + str
 X_train, X_test, y_train, y_test = train_test_split(shifted_df_X, shifted_df_y, test_size=0.2, random_state=0)
 #
 # Normalize feature set
-# X_train = normalize(X_train, norm='l1')
-# X_test = normalize(X_test, norm='l1')
+# X_train = normalize(X_train, norm='l2')
+# X_test = normalize(X_test, norm='l2')
 #
 # Feed through SVM classifier
-svc = svm.SVC()
-parameters = {'kernel':('linear', 'rbf'), 'C':[1, 2, 3, 4, 5], 'gamma':[1,.1,.01,.001]}
-# http://blog.hackerearth.com/simple-tutorial-svm-parameter-tuning-python-r
-clf = GridSearchCV(svc, parameters)
-clf.fit(X_train, y_train.ravel())
-#
-print(sorted(clf.cv_results_.keys()))
-# clf = svm.SVC(kernel='poly', degree=3)
-# clf.fit(X_train, y_train)
-# print(clf)
+clf = svm.SVR(kernel='rbf')
+clf.fit(X_train, y_train)
+print(clf)
 #
 # Test Testing Sub sample
 y_pred = []
 for i in range(len(y_test)):
-    y_pred.append(clf.predict([X_test[i]]))
+    pred = clf.predict([X_test[i]])
+    if pred >= .5:
+        y_pred.append(1)
+    else:
+        y_pred.append(0)
 #
 # Testing Classifier Accuracy
 sf = Scoring_Functions(y_pred=y_pred, y_true=y_test)
