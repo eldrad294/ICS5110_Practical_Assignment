@@ -65,7 +65,7 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     return agg
 #
 # N-Step Univariate Forecasting Shift
-lag = 0
+lag = 5
 df_pruned_shifted = series_to_supervised(data=df_pruned, n_in=lag, n_out=1, dropnan=True)
 #
 # Removing any lag variables of var15(t-lag) (label)
@@ -79,14 +79,20 @@ df_pruned_shifted_header_count = len(df_pruned_shifted_headers)
 from sklearn.model_selection import train_test_split
 df_pruned_shifted_Y = df_pruned_shifted['var15(t)']
 df_pruned_shifted_X = df_pruned_shifted.drop('var15(t)', 1)
+#
 X_train, X_test, y_train, y_test = train_test_split(df_pruned_shifted_X, df_pruned_shifted_Y, test_size=0.2, random_state=0)
+#
+# Normalize shifted_df_X
+from sklearn.preprocessing import normalize
+X_train = normalize(X_train, norm='l2')
+X_test = normalize(X_test, norm='l2')
 #
 # https://www.fabienplisson.com/choosing-right-features/
 print('Random Forest Classifier')
 from sklearn.ensemble import RandomForestClassifier
 rfc = RandomForestClassifier()
 rfc.fit(X_train, y_train)
-feature_importances = pd.DataFrame({'feature': df_pruned_shifted_X.columns, 'importance': np.round(rfc.feature_importances_, 3)})
+feature_importances = pd.DataFrame({'feature': df_pruned_shifted_X.columns, 'importance': np.round(rfc.feature_importances_, 6)})
 feature_importances = feature_importances.sort_values('importance', ascending=False).set_index('feature')
 #
 print(feature_importances)
@@ -143,7 +149,7 @@ print('Gradient Boosting Classifier')
 from sklearn.ensemble import GradientBoostingClassifier
 gbc = GradientBoostingClassifier()
 gbc.fit(X_train, y_train)
-feature_importances = pd.DataFrame({'feature': df_pruned_shifted_X.columns, 'importance': np.round(gbc.feature_importances_, 3)})
+feature_importances = pd.DataFrame({'feature': df_pruned_shifted_X.columns, 'importance': np.round(gbc.feature_importances_, 6)})
 feature_importances = feature_importances.sort_values('importance', ascending=False).set_index('feature')
 #
 print(feature_importances)
@@ -185,68 +191,6 @@ for thresh in thresholds:
     #
     # training model
     selection_model = GradientBoostingClassifier()
-    selection_model.fit(select_train_x, y_train)
-    #
-    # evaluating model
-    select_test_x = selection.transform(X_test)
-    pred_y = selection_model.predict(select_test_x)
-    sf = Scoring_Functions(y_pred=pred_y, y_true=y_test)
-    print('Threshold: ' + str(thresh))
-    print('Feature Count: ' + str(select_train_x.shape[1]))
-    print(sf.scoring_results())
-    print('-------------------------')
-#
-print('SVM Classifier')
-from sklearn.svm import SVC
-kernel = 'linear'
-C = 1
-gamma = 'auto'
-degree = 3
-svm = SVC(kernel=kernel,C=C,gamma=gamma,degree=degree)
-svm.fit(X_train, y_train)
-feature_importances = pd.DataFrame({'feature': df_pruned_shifted_X.columns, 'importance': np.round(svm.coef_[0], 3)})
-feature_importances = feature_importances.sort_values('importance', ascending=False).set_index('feature')
-#
-print(feature_importances)
-#
-# Plot the feature importance of the forest
-outward_path = 'D:\\Projects\\ICS5110_Practical_Assignment\\src\\Gabriel\\ML_Workbook_1\\Findings\\Plots_Multivariate\\Lag' + str(lag) + '\\'
-import matplotlib.pyplot as plt
-fig = plt.figure()
-plt.title("Feature importance")
-objects = list(feature_importances.axes[0])
-y_pos = np.arange(len(objects))
-feature_importance = np.array(feature_importances)
-plt.bar(y_pos, feature_importance, align='center', alpha=0.5)
-plt.xticks(y_pos, objects)
-fig.savefig(outward_path + 'SupportVectorClassifier_FeatureImportance.png')
-#
-from numpy import sort
-from sklearn.feature_selection import SelectFromModel
-#
-model = SVC(kernel=kernel,C=C,gamma=gamma,degree=degree)
-model.fit(X_train, y_train)
-#
-# make predictions for test data and evaluate
-pred_y = model.predict(X_test)
-predictions = [round(value) for value in pred_y]
-#
-# Testing Classifier Accuracy
-from src.statistics.scoring_functions import Scoring_Functions
-sf = Scoring_Functions(y_pred=predictions, y_true=y_test)
-print("SVM Accuracy: ")
-print(sf.scoring_results())
-print('-------------------------')
-#
-# fit model using each importance as a threshold
-thresholds = sort(model.coef_[0])
-for thresh in thresholds:
-    # selecting features using threshold
-    selection = SelectFromModel(model, threshold=thresh, prefit=True)
-    select_train_x = selection.transform(X_train)
-    #
-    # training model
-    selection_model = SVC(kernel=kernel,C=C,gamma=gamma,degree=degree)
     selection_model.fit(select_train_x, y_train)
     #
     # evaluating model

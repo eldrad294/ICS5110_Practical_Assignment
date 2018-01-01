@@ -1,9 +1,35 @@
-from pandas import DataFrame, concat
 import pandas as pd
+from pandas import concat, DataFrame
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from src.statistics.scoring_functions import Scoring_Functions
+#
+path = 'EEGEyeState.csv'
+df = pd.read_csv(path)
+df_values = df.values
+df_values_count = len(df_values)
+df_headers = df.columns
+df_header_count = len(df_headers)
+print('DF size before outlier removal: ' + str(df_values_count))
+#
+# Removing outliers
+def get_outlier_indexes(df, df_col_count, outlier_value=5000):
+    """ Takes a dataframe and returns the position of any outliers """
+    outLierIndexes = set()
+    upperLimit = outlier_value
+    for x in range(df_col_count):
+        df = np.array(df)
+        outLiers = np.where(df[:, x] > upperLimit)[0]
+        if len(outLiers) > 0:
+            [(outLierIndexes.add(outLiers[i])) for i in range(len(outLiers))]
+    #
+    outLierIndexes = list(outLierIndexes)
+    outLierIndexes.sort()
+    return outLierIndexes
+#
+outlier_indexes = get_outlier_indexes(df_values, df_header_count)
+df_values_pruned = np.delete(df_values, outlier_indexes, 0)
+df_values_pruned_count = len(df_values_pruned)
+df_pruned = pd.DataFrame(data=df_values_pruned, columns=df_headers)
+print('DF size after outlier removal: ' + str(df_values_pruned_count))
 #
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     """
@@ -38,74 +64,49 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
         agg.dropna(inplace=True)
     return agg
 #
-def get_outlier_indexes(df, df_count, outlier_value=5000):
-    """ Takes a dataframe and returns the position of any outliers """
-    outLierIndexes = set()
-    upperLimit = outlier_value
-    for x in range(df_count):
-        df = np.array(df)
-        outLiers = np.where(df[:, x] > upperLimit)[0]
-        if len(outLiers) > 0:
-            [(outLierIndexes.add(outLiers[i])) for i in range(len(outLiers))]
-    #
-    outLierIndexes = list(outLierIndexes)
-    outLierIndexes.sort()
-    return outLierIndexes
-#
-path = 'EEGEyeState.csv'
-df = pd.read_csv(path)
-#
 # N-Step Univariate Forecasting Shift
-lag = 2
-shifted_df = series_to_supervised(data=df, n_in=lag, n_out=1, dropnan=True)
+lag = 0
+df_pruned_shifted = series_to_supervised(data=df_pruned, n_in=lag, n_out=1, dropnan=True)
 #
-# Taking only the top 5 relevant features (Lag 0 - 6) Per RandomForest Feature Importance Grading
-important_columns = [['var7(t)','var6(t)','var2(t)','var13(t)','var14(t)','var15(t)'],
-                     ['var7(t)','var7(t-1)','var6(t-1)','var6(t)','var2(t-1)','var15(t)'],
-                     ['var7(t-2)','var7(t)','var6(t-2)','var7(t-1)','var6(t)','var15(t)'],
-                     ['var7(t-3)','var7(t)','var6(t-3)','var6(t-2)','var7(t-1)','var15(t)'],
-                     ['var7(t-4)','var7(t)','var6(t-3)','var7(t-2)','var6(t-4)','var15(t)'],
-                     ['var6(t-5)','var7(t)','var6(t)','var6(t-2)','var7(t-3)','var15(t)']]
-shifted_df = shifted_df[important_columns[lag]]
-#
-shifted_df_headers = shifted_df.columns
-shifted_feature_count = len(shifted_df_headers)
-#print(shifted_feature_count)
-#
-# Converting shifted dataframe into separate feature and label dataframes
-shifted_df_X = shifted_df.drop('var15(t)', 1)
-# for i in range(1,lag+1):
-#     column = 'var15(t-' + str(i) + ')'
-#     shifted_df_X = shifted_df_X.drop(column, 1)
-shifted_columns = shifted_df_X.columns
-shifted_df_X_count = len(shifted_columns)
-shifted_df_X = shifted_df_X.values
-shifted_df_y = shifted_df[['var15(t)']].values
-#
-# Removing Outliers
-outLierIndexes = get_outlier_indexes(shifted_df_X, shifted_df_X_count, 5000)
-shifted_df_X = np.delete(shifted_df_X, outLierIndexes, 0)
-shifted_df_y = np.delete(shifted_df_y, outLierIndexes, 0)
-#
-print('Size of features: ' + str(len(shifted_df_X)) + '\nSize of labels: ' + str(len(shifted_df_y)))
+# Removing any lag variables of var15(t-lag) (label)
+if lag > 0:
+    for i in range(1,lag+1):
+        df_pruned_shifted = df_pruned_shifted.drop('var15(t-' + str(i) + ')', 1)
+df_pruned_shifted_headers = df_pruned_shifted.columns
+df_pruned_shifted_header_count = len(df_pruned_shifted_headers)
 #
 # Cross-validating of dataset: Splitting dataset into sub samples for training and testing purposes
-X_train, X_test, y_train, y_test = train_test_split(shifted_df_X, shifted_df_y, test_size=0.2, random_state=0)
+from sklearn.model_selection import train_test_split
+df_pruned_shifted_Y = df_pruned_shifted['var15(t)']
+df_pruned_shifted_X = df_pruned_shifted.drop('var15(t)', 1)
 #
-# Normalize feature set
-# X_train = normalize(X_train, norm='l2')
-# X_test = normalize(X_test, norm='l2')
+# Drop unwanted variables which decrease accuracy of overall prediction (as generated from RFC)
+df_pruned_shifted_X = df_pruned_shifted_X.drop('var9(t)', 1)
+df_pruned_shifted_X = df_pruned_shifted_X.drop('var3(t)', 1)
 #
-# Feed through SVM classifier
+X_train, X_test, y_train, y_test = train_test_split(df_pruned_shifted_X, df_pruned_shifted_Y, test_size=0.2, random_state=0)
+#
+#Normalize shifted_df_X
+from sklearn.preprocessing import normalize
+X_train = normalize(X_train, norm='l2')
+X_test = normalize(X_test, norm='l2')
+#
+# using a grid search to find optimum hyper parameter
+# https://machinelearningmastery.com/linear-discriminant-analysis-for-machine-learning/
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+clf = LinearDiscriminantAnalysis()
+clf.fit(X_train,y_train)
+#
 clf = LinearDiscriminantAnalysis()
 clf.fit(X_train, y_train)
 print(clf)
 #
-# Test Testing Sub sample
-y_pred = []
-for i in range(len(y_test)):
-    y_pred.append(clf.predict([X_test[i]]))
+# make predictions for test data and evaluate
+pred_y = clf.predict(X_test)
 #
 # Testing Classifier Accuracy
-sf = Scoring_Functions(y_pred=y_pred, y_true=y_test)
+from src.statistics.scoring_functions import Scoring_Functions
+sf = Scoring_Functions(y_pred=pred_y, y_true=y_test)
+print("LDA Accuracy: ")
 print(sf.scoring_results())
+print('-------------------------')
