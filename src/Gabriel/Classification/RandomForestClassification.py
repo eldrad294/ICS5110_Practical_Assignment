@@ -81,30 +81,37 @@ df_pruned_shifted_Y = df_pruned_shifted['var15(t)']
 df_pruned_shifted_X = df_pruned_shifted.drop('var15(t)', 1)
 #
 # Drop unwanted variables which decrease accuracy of overall prediction (as generated from RFC)
-#df_pruned_shifted_X = df_pruned_shifted_X.drop('var9(t)', 1)
+df_pruned_shifted_X = df_pruned_shifted_X.drop('var9(t)', 1)
 #
 X_train, X_test, y_train, y_test = train_test_split(df_pruned_shifted_X, df_pruned_shifted_Y, test_size=0.2, random_state=0)
 #
 # Normalize shifted_df_X
-from sklearn.preprocessing import normalize
-X_train = normalize(X_train, norm='l2')
-X_test = normalize(X_test, norm='l2')
-#
-# using a grid search to find optimum hyper parameter
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV
-parameters = {'n_estimators': (8000,10000, 12000),  'n_jobs':[4]}
-svc = RandomForestClassifier()
-clf = GridSearchCV(svc, parameters, cv=2)
-print(clf)
-clf.fit(X_train,y_train)
-print(clf.best_params_)
+# from sklearn.preprocessing import normalize
+# X_train = normalize(X_train, norm='l1')
+# X_test = normalize(X_test, norm='l1')
 
-n_estimators = clf.best_params_['n_estimators']
+# # using a grid search to find optimum hyper parameter
+from sklearn.ensemble import RandomForestClassifier
+# from sklearn.model_selection import GridSearchCV
+# parameters = {'n_estimators': (8000,10000, 12000),  'n_jobs':[4]}
+# svc = RandomForestClassifier()
+# clf = GridSearchCV(svc, parameters, cv=2)
+# print(clf)
+# clf.fit(X_train,y_train)
+# print(clf.best_params_)
+#
+# n_estimators = clf.best_params_['n_estimators']
+# max_features = 'sqrt'
+# criterion = 'gini'
+# clf = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features)
+# clf.fit(X_train, y_train)
+#
+n_estimators = 12000
 max_features = 'sqrt'
 criterion = 'gini'
-clf = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features)
+clf = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features, n_jobs=6)
 clf.fit(X_train, y_train)
+#
 print(clf)
 #
 # make predictions for test data and evaluate
@@ -113,6 +120,6 @@ pred_y = clf.predict(X_test)
 # Testing Classifier Accuracy
 from src.statistics.scoring_functions import Scoring_Functions
 sf = Scoring_Functions(y_pred=pred_y, y_true=y_test)
-print("SVM Accuracy: ")
+print("Random Forest Accuracy: ")
 print(sf.scoring_results())
 print('-------------------------')

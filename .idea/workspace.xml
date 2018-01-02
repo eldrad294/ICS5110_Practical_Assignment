@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55de083d-4689-485b-ae38-82fc1a316604" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/RandomForestClassification.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag0/SupportVectorClassifier_FeatureImportance.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Multivariate Feature Ranking.xlsx" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Multivariate Feature Ranking.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag0/GradientBoostingClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag0/GradientBoostingClassifier_FeatureImportance.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag0/RandomForestClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag0/RandomForestClassifier_FeatureImportance.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Univariate Feature Ranking.xlsx" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Univariate Feature Ranking.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Classification Ranking.xlsx" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Classification Ranking.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag1/GradientBoostingClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag1/GradientBoostingClassifier_FeatureImportance.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag1/RandomForestClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag1/RandomForestClassifier_FeatureImportance.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag2/GradientBoostingClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag2/GradientBoostingClassifier_FeatureImportance.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag2/RandomForestClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag2/RandomForestClassifier_FeatureImportance.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag5/GradientBoostingClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag5/GradientBoostingClassifier_FeatureImportance.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag5/RandomForestClassifier_FeatureImportance.png" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Findings/Plots_Multivariate/Lag5/RandomForestClassifier_FeatureImportance.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Multivariate_Feature_Selection.py" afterPath="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Multivariate_Feature_Selection.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gabriel/Classification/RandomForestClassification.py" afterPath="$PROJECT_DIR$/src/Gabriel/Classification/RandomForestClassification.py" />
     </list>
     <ignored path="ICS5110_Practical_Assignment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +33,7 @@
       <file leaf-file-name="SVM_Classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="1411">
               <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="61" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -47,7 +45,7 @@
       <file leaf-file-name="Logistic_Regression_Classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="1513">
               <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -59,7 +57,7 @@
       <file leaf-file-name="LDA_Classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
+            <state relative-caret-position="1394">
               <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="60" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -71,8 +69,8 @@
       <file leaf-file-name="RandomForestClassification.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/RandomForestClassification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="110" column="28" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
+            <state relative-caret-position="382">
+              <caret line="100" column="25" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -83,8 +81,8 @@
       <file leaf-file-name="Multivariate_Feature_Selection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Multivariate_Feature_Selection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="119" selection-end-column="1" />
+            <state relative-caret-position="17">
+              <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -138,19 +136,19 @@
         <option value="$PROJECT_DIR$/src/Nicholas/TimeSeriesExperimentation/02_TimeSeriesFeatureSelection_UnivariateDataset/TimeSeriesFeatureSelection_UnivariateDataset.ipynb" />
         <option value="$PROJECT_DIR$/src/Nicholas/EEGDataAnalysis/EEGDataAnalysis.ipynb" />
         <option value="$PROJECT_DIR$/src/Gabriel/Convert_Time_Series_To_Supervised/Convert_Time_Series_To_Supervised.py" />
-        <option value="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Multivariate_Feature_Selection.py" />
         <option value="$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py" />
         <option value="$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py" />
         <option value="$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py" />
+        <option value="$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Multivariate_Feature_Selection.py" />
         <option value="$PROJECT_DIR$/src/Gabriel/Classification/RandomForestClassification.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -307,6 +305,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ML_Workbook_1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICS5110_Practical_Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICS5110_Practical_Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gabriel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Classification" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -355,8 +375,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,7 +395,7 @@
       <recent name="D:\Projects\ICS5110_Practical_Assignment\src\Gabriel\Visualize_Time_Shifted_Feature_Importance" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Logistic_Regression_Classification">
+  <component name="RunManager" selected="Python.RandomForestClassification">
     <configuration default="false" name="SVM_Classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -605,10 +625,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.RandomForestClassification" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Logistic_Regression_Classification" />
-        <item index="2" class="java.lang.String" itemvalue="Python.SVM_Classification" />
-        <item index="3" class="java.lang.String" itemvalue="Python.LDA_Classification" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Multivariate_Feature_Selection" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Multivariate_Feature_Selection" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Logistic_Regression_Classification" />
+        <item index="3" class="java.lang.String" itemvalue="Python.SVM_Classification" />
+        <item index="4" class="java.lang.String" itemvalue="Python.LDA_Classification" />
       </list>
     </recent_temporary>
   </component>
@@ -629,15 +649,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26328126" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17552084" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14842904" sideWeight="0.50421494" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19176598" sideWeight="0.49578503" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31573033" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31501058" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.50508904" order="2" side_tool="true" content_ui="tabs" />
@@ -818,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="1903" column="4" selection-start-line="1903" selection-start-column="4" selection-end-line="1903" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -826,9 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -836,9 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="475" column="4" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="1350" column="4" selection-start-line="1350" selection-start-column="4" selection-end-line="1350" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,23 +873,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Multivariate_Feature_Selection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="119" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/SVM_Classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="1411">
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="61" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -888,7 +888,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/LDA_Classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="1394">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="60" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -898,8 +898,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/Logistic_Regression_Classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="1513">
           <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gabriel/ML_Workbook_1/Multivariate_Feature_Selection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -908,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gabriel/Classification/RandomForestClassification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="110" column="28" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
+        <state relative-caret-position="382">
+          <caret line="100" column="25" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
