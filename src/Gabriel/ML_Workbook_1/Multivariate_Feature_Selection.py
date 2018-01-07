@@ -65,7 +65,7 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     return agg
 #
 # N-Step Univariate Forecasting Shift
-lag = 5
+lag = 0
 df_pruned_shifted = series_to_supervised(data=df_pruned, n_in=lag, n_out=1, dropnan=True)
 #
 # Removing any lag variables of var15(t-lag) (label)
