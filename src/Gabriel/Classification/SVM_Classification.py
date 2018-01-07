@@ -2,7 +2,7 @@ import pandas as pd
 from pandas import concat, DataFrame
 import numpy as np
 #
-path = 'EEGEyeState.csv'
+path = 'EEGEyeState_Training.arff.csv'
 df = pd.read_csv(path)
 df_values = df.values
 df_values_count = len(df_values)
@@ -65,7 +65,7 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     return agg
 #
 # N-Step Univariate Forecasting Shift
-lag = 1
+lag = 0
 df_pruned_shifted = series_to_supervised(data=df_pruned, n_in=lag, n_out=1, dropnan=True)
 #
 # Removing any lag variables of var15(t-lag) (label)
@@ -84,7 +84,7 @@ df_pruned_shifted_X = df_pruned_shifted.drop('var15(t)', 1)
 # df_pruned_shifted_X = df_pruned_shifted_X.drop('var6(t)', 1)
 # df_pruned_shifted_X = df_pruned_shifted_X.drop('var2(t)', 1)
 #
-X_train, X_test, y_train, y_test = train_test_split(df_pruned_shifted_X, df_pruned_shifted_Y, test_size=0.4, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(df_pruned_shifted_X, df_pruned_shifted_Y, test_size=0.2, random_state=0)
 #
 # Normalize shifted_df_X
 # from sklearn.preprocessing import normalize
@@ -99,15 +99,15 @@ X_test = scaler.fit_transform(X_test)
 # using a grid search to find optimum hyper parameter
 from sklearn import svm
 from sklearn.model_selection import GridSearchCV
-parameters = {'C': (2, 3, 4, 5), 'gamma':[120, 115, 110, 105], 'degree': [.3,.4,.5,.6]}
+parameters = {'C': (1, 2, 3, 4, 5, 6, 7), 'gamma':[40, 35, 30, 27, 25, 23, 20]}
 clf = svm.SVC()
-clf = GridSearchCV(clf, parameters, cv=2)
+clf = GridSearchCV(clf, parameters)
 clf.fit(X_train, y_train)
 print(clf.best_params_)
 kernel = 'rbf'
-C = 3
-gamma = 110
-degree = 2
+C = clf.best_params_['C']
+gamma = clf.best_params_['gamma']
+degree = 3
 clf = svm.SVC(kernel=kernel, C=C, gamma=gamma, degree=degree)
 clf.fit(X_train, y_train)
 print(clf)

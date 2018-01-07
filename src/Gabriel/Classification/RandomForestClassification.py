@@ -2,7 +2,7 @@ import pandas as pd
 from pandas import concat, DataFrame
 import numpy as np
 #
-path = 'EEGEyeState.csv'
+path = 'EEGEyeState_Training.arff.csv'
 df = pd.read_csv(path)
 df_values = df.values
 df_values_count = len(df_values)
@@ -93,20 +93,14 @@ X_train, X_test, y_train, y_test = train_test_split(df_pruned_shifted_X, df_prun
 # # using a grid search to find optimum hyper parameter
 from sklearn.ensemble import RandomForestClassifier
 # from sklearn.model_selection import GridSearchCV
-# parameters = {'n_estimators': (8000,10000, 12000),  'n_jobs':[4]}
-# svc = RandomForestClassifier()
-# clf = GridSearchCV(svc, parameters, cv=2)
+# parameters = {'n_estimators': (9000, 10000, 11000)}
+# svc = RandomForestClassifier(n_jobs=6)
+# clf = GridSearchCV(svc, parameters)
 # print(clf)
 # clf.fit(X_train,y_train)
 # print(clf.best_params_)
-#
-# n_estimators = clf.best_params_['n_estimators']
-# max_features = 'sqrt'
-# criterion = 'gini'
-# clf = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features)
-# clf.fit(X_train, y_train)
-#
-n_estimators = 12000
+
+n_estimators = 10000
 max_features = 'sqrt'
 criterion = 'gini'
 clf = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features, n_jobs=6)
