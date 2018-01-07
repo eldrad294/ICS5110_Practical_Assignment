@@ -81,28 +81,28 @@ df_pruned_shifted_Y = df_pruned_shifted['var15(t)']
 df_pruned_shifted_X = df_pruned_shifted.drop('var15(t)', 1)
 #
 # Drop unwanted variables which decrease accuracy of overall prediction (as generated from RFC)
-df_pruned_shifted_X = df_pruned_shifted_X.drop('var9(t)', 1)
-df_pruned_shifted_X = df_pruned_shifted_X.drop('var3(t)', 1)
-df_pruned_shifted_X = df_pruned_shifted_X.drop('var12(t)', 1)
 #
 X_train, X_test, y_train, y_test = train_test_split(df_pruned_shifted_X, df_pruned_shifted_Y, test_size=0.2, random_state=0)
 #
 # Normalize shifted_df_X
-from sklearn.preprocessing import normalize
-X_train = normalize(X_train, norm='l2')
-X_test = normalize(X_test, norm='l2')
+# from sklearn.preprocessing import normalize
+# X_train = normalize(X_train, norm='l2')
+# X_test = normalize(X_test, norm='l2')
+#
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.fit_transform(X_test)
 #
 # using a grid search to find optimum hyper parameter
 from sklearn import svm
 from sklearn.model_selection import GridSearchCV
-parameters = {'kernel': ('linear', 'rbf', 'poly', 'sigmoid'), 'C':[.2,.5,.7],'gamma': [1e-7,1e-6,1e-5],'degree':[1]}
-svc = svm.SVC()
-clf = GridSearchCV(svc, parameters, cv=2)
-print(clf)
-clf.fit(X_train,y_train)
+parameters = {'C': (1.5, 2, 3, 5, 7), 'gamma':[110, 105, 100, 95, 90], 'degree': [.5,1,1.5]}
+clf = svm.SVC()
+clf = GridSearchCV(clf, parameters, cv=2)
+clf.fit(X_train, y_train)
 print(clf.best_params_)
-
-kernel = clf.best_params_['kernel']
+kernel = 'rbf'
 C = clf.best_params_['C']
 gamma = clf.best_params_['gamma']
 degree = clf.best_params_['degree']
