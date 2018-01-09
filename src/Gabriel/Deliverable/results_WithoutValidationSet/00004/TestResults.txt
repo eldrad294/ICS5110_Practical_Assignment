@@ -1,0 +1,12 @@
+Results:
+Accuracy: 23.2777666198%
+Precision: 5.41854418806%
+Recall: 23.2777666198%
+FMeasure: 8.79078902325%
+
+Execution time: 1349.10736704secs
+
+Command history:
+----------------
+CompileModel_Lag:1_NeuronCount:50_DropOut:0.0_useLaggedOutput:True_LossFunc:mae_OptimizerFunc:adam_lstmStackCount:5
++FitModel_EpochCount:1000_BatchSize:50_lossFuncFilePrefix:01_lossFile_predictionFilePrefix:01_predictionFile
