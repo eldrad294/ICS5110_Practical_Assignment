@@ -1,0 +1,22 @@
+Test data results:
+------------------
+Accuracy: 99.4965767217%
+Precision: 99.4976105694%
+Recall: 99.4965767217%
+FMeasure: 99.4969536095%
+
+Validation data results:
+------------------------
+Accuracy: 99.8%
+Precision: 99.8007640879%
+Recall: 99.8%
+FMeasure: 99.7999819635%
+
+Execution time: 48.0564498901secs
+
+Command history:
+----------------
+RemoveOutliers_Upper:5000_Lower:None
++NormalizeData_Func:MinMax
+++CompileModel_Lag:10_NeuronCount:5_DropOut:0.0_useLaggedOutput:True_LossFunc:mae_OptimizerFunc:adam_lstmStackCount:1
++++FitModel_EpochCount:50_BatchSize:50_trainValidationRatio:0.8_lossFuncFilePrefix:01_lossFile_predictionFilePrefix:01_predictionFile
