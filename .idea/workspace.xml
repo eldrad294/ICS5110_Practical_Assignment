@@ -25,17 +25,7 @@
     <favorites_list name="ICS5110_Practical_Assignment" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Experiment2.ipynb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Gabriel/Deliverable/Experiment2.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -472,7 +462,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="0" />
+    <frame x="1912" y="-8" width="1296" height="1000" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33465818" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" />
